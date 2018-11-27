@@ -1,0 +1,17 @@
+extends partials/main
+include partials/nav
+block content
+    if signupMessage.length > 0
+        div #{signupMessage}
+    if signinMessage.length > 0
+        div #{signinMessage}
+
+    div(class="container mt-5")
+        form(method='POST' action='/signup')
+            div(class="form-group")
+                input(type='email',placeholder='Ingrese su correo' name='email' class="form-control")
+            div(class="form-group")
+                input(type='password', placeholder='*********' name='password' class="form-control")
+            input(type='submit' class="btn btn-primary" value='Registrar')
+           
+    
